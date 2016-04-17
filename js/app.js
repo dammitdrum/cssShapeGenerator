@@ -55,7 +55,6 @@ App.Engine = Marionette.Object.extend({
 				App.start();
 				return;
 			};
-			conssole.log(self.count);
 			self.loader(self.arr_tpl);
     	};
 	}
