@@ -1,0 +1,77 @@
+
+<% if (multi===1&&multi_type!=='border_radius') { %>
+<div class="btn-group arrows" data-trigger=".type_<%=multi_type%>" role="group">
+	<button type='button' data-num="0" data-toggle="tooltip" data-placement="top" title="All" class="btn btn-default btn-xs">all</button>
+	<button type='button' data-num="1" data-toggle="tooltip" data-placement="top" title="Top" class="btn btn-default btn-xs">&nbsp;&#8593;&nbsp;</button>
+	<button type='button' data-num="2" data-toggle="tooltip" data-placement="top" title="Right" class="btn btn-default btn-xs">&#8594;</button>
+	<button type='button' data-num="3" data-toggle="tooltip" data-placement="top" title="Bottom" class="btn btn-default btn-xs">&nbsp;&#8595;&nbsp;</button>
+	<button type='button' data-num="4" data-toggle="tooltip" data-placement="top" title="Left" class="btn btn-default btn-xs">&#8592;</button>
+</div>
+<div class="type_<%=multi_type%>">
+	<% if (type==='color') {%>
+	<label class="checkbox">
+		<input type="checkbox">
+		<span>transparent</span>
+	</label>
+	<%}%>
+	<div class="col-md-12"><h4><%=title%></h4></div>
+	<div class="col-md-2"><input type="text" class="field"></div>
+	<div class="col-md-10">
+		<% if (type==='color') {%>
+	<button class="button_apply btn btn-default btn-xs">apply</button>
+	<%}%><div class="range_slider"></div></div>
+</div>
+<% } else if (multi===1&&multi_type==='border_radius') { %>
+<div class="btn-group arrows" data-trigger=".type_<%=multi_type%>" role="group">
+	<button type='button' data-num="0" data-toggle="tooltip" data-placement="top" title="All" class="btn btn-default btn-xs">all</button>
+	<button type='button' data-num="1" data-toggle="tooltip" data-placement="top" title="Top-right" class="btn btn-default btn-xs">&#8599;</button>
+	<button type='button' data-num="2" data-toggle="tooltip" data-placement="top" title="Bottom-right" class="btn btn-default btn-xs">&#8600;</button>
+	<button type='button' data-num="3" data-toggle="tooltip" data-placement="top" title="Bottom-left" class="btn btn-default btn-xs">&#8601;</button>
+	<button type='button' data-num="4" data-toggle="tooltip" data-placement="top" title="Top-left" class="btn btn-default btn-xs">&#8598;</button>
+</div>
+<div class="type_<%=multi_type%>">
+	<div class="col-md-12"><h4><%=title%></h4></div>
+	<div class="col-md-2">
+		<input type="text" class="field">
+		<div class="radio clearfix">
+			<span class="check">px</span>
+			<span>%</span>
+		</div>
+	</div>
+	<div class="col-md-10"><div class="range_slider"></div></div>
+</div>
+<% }; if (multi===0&&multi_type==='border_radius') { %>
+<div class="type_<%=multi_type%>" style="display:none;">
+	<div class="col-md-12"><h4><%=title%></h4></div>
+	<div class="col-md-2">
+		<input type="text" class="field">
+		<div class="radio clearfix">
+			<span class="check">px</span>
+			<span>%</span>
+		</div>
+	</div>
+	<div class="col-md-10"><div class="range_slider"></div></div>
+</div>
+<% }; if (multi===0&&multi_type!=='border_radius') { %>
+<div class="type_<%=multi_type%>" style="display:none;">
+	<% if (type==='color') {%>
+	<label class="checkbox">
+		<input type="checkbox">
+		<span>transparent</span>
+	</label>
+	<%}%>
+	<div class="col-md-12"><h4><%=title%></h4></div>
+	<div class="col-md-2"><input type="text" class="field"></div>
+	<div class="col-md-10"><div class="range_slider"></div></div>
+</div>
+<% }; if (multi===false) { %>
+<% if (type==='color') {%>
+<label class="checkbox">
+	<input type="checkbox">
+	<span>transparent</span>
+</label>
+<%}%>
+<div class="col-md-12"><h4><%=title%></h4></div>
+<div class="col-md-2"><input type="text" class="field"></div>
+<div class="col-md-10"><div class="range_slider"></div></div>
+<% } %> 

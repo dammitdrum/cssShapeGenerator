@@ -1,0 +1,52 @@
+<div id="gradientModal" class="modal fade gradientModal" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3 class="modal-title">Gradient generator</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-2 text-center">
+						<div class="btn-group" role="group" >
+						  <button type="button" data-str="linear-gradient(to right" class="btn btn-sm btn-default direct">horizontal &nbsp;&#8594;</button>
+						  <button type="button" data-str="linear-gradient(to bottom" class="btn btn-sm btn-default direct">vertical &nbsp;&#8595;</button>
+						  <button type="button" data-str="linear-gradient(135deg" class="btn btn-sm btn-default direct">diagonal &nbsp;&#8600;</button>
+						  <button type="button" data-str="linear-gradient(45deg" class="btn btn-sm btn-default direct">diagonal &nbsp;&#8599;</button>
+						  <button type="button" data-str="radial-gradient(ellipse at center" class="btn btn-sm btn-default direct">radial &nbsp;○</button>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<h5>Left</h5>
+						<input type="text" class="color_field">
+						<h5>Middle</h5>
+						<input type="text" class="color_field">
+						<h5>Right</h5>
+						<input type="text" class="color_field">
+					</div>
+					<div class="col-sm-10">
+						<div class="gradient_field"></div>
+						<style></style>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-2">
+						<div class="range_slider point"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-2">
+						<div class="alert alert-info text-center" role="alert">Move the marker to set position of gradient</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-warning add" id="submit_grad" data-dismiss="modal">Add gradient to background 
+					<%if(currProps==='props') {%>Shape<%} else if (currProps==='props_a'){%>::after<%} else {%>::before<%}%>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h1 contenteditable="false" id="shape_name"><%=query%><%if(community===false) {%><i id="editName" class="btn btn-lg"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></i><%}%></h1>
+		<div class="alert alert-danger error_msg" id="error_format" role="alert"> <strong>Error!</strong> The first character letter only, others only letters or numbers without spaces</div>
+		<div class="alert alert-danger error_msg" id="error_exist" role="alert"> <strong>Shape with this name exist!</strong> </div>
+		<div class="buttons">
+			<button type="button" class="btn btn-default grad btn-lg" data-toggle="modal" data-target="#gradientModal" id="get_gradient">Gradient generator</button>
+			<button type="button" class="btn btn-default btn-sm" id="get_css" data-toggle="modal" data-target="#myModal">Get CSS</button>
+			<button type="button" class="btn btn-default btn-sm random" id="random">Random &nbsp;<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+		</div>
+		<ul class="nav nav-tabs pseudo">
+			<li><a href="#" data-toggle="tab" class="pseudoTrigg" data-tab="props_b">::before<kbd>Gr</kbd></a></li>
+			<li><a href="#" data-toggle="tab" class="pseudoTrigg" data-tab="props">Shape<kbd>Gr</kbd></a></li> 
+			<li><a href="#" data-toggle="tab" class="pseudoTrigg" data-tab="props_a">::after<kbd>Gr</kbd></a></li> 
+		</ul>
+	</div>
+</div>
+<style><%=str_css%></style>
+<div class="row screen">
+	<div class="col-sm-12">
+		<div class="wrap_shape"><div id="<%=query%>" class="shape"></div></div>
+	</div>
+</div>
+<div class="text-center">
+<%if(community===false) {%>
+<button type="button" id="save" class="btn btn-lg btn-success" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Shape has been saved">Save shape &nbsp;<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
+<%} else {%>
+<button type="button" id="copy" class="btn btn-lg btn-warning" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Shape has been copied">Copy shape &nbsp;<span class="glyphicon glyphicon-copy" aria-hidden="true"></span></button>
+<%}%>
+</div>
+<div id="myModal" class="modal fade css_modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">CSS Code</h4>
+			</div>
+			<div class="modal-body" >
+				<pre><button class="btn btn-default btn-xs" id="clipboard" data-clipboard-target="#modalCode">Copy</button><span id="modalCode"></span></pre>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

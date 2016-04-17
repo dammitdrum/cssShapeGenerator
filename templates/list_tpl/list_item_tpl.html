@@ -1,0 +1,12 @@
+<div class="thumbnail">
+  <a href="<%if(community){%>#community/<%=query%><%} else {%>#myshapes/<%=query%>/edit<%}%>" class="shape_preview">
+  	<style><%=str_css%></style>
+  	<div class="scale">
+  		<div id="<%=query%>" class="shape"></div>
+  	</div>
+  </a>
+  <div class="caption">
+    <h3><%=query%></h3>
+    <p class="mini_butts"><%if(community){%><a href="#community/<%=query%>" class="btn btn-primary edit" role="button">Check out &nbsp;<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><%} else {%><a href="#myshapes/<%=query%>/edit" class="btn btn-warning edit" role="button">Edit &nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a> <button class="btn btn-danger delete" role="button">Delete &nbsp;<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><%}%></p>
+  </div>
+</div>
