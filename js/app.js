@@ -44,7 +44,6 @@ App.Engine = Marionette.Object.extend({
 	},
 	loader: function(arr) {
 		var self = this;
-
 		this.xhr.open('GET',"/serg/app/templates/"+arr[self.count]+".html",true);
 		this.xhr.send();
 		this.xhr.onreadystatechange = function() {
