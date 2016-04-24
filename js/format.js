@@ -1,5 +1,5 @@
 	
-define([],function(Marionette,App,sidebarView){
+define([],function(){
 
 	return function(shape) {
 		var default_css = 'position: relative;\n   box-sizing: content-box;\n   ',

@@ -53,6 +53,24 @@ define(['marionette','backbone'],function(Marionette,Backbone){
 		}
 	});
 
+<<<<<<< HEAD
 	return App;
+=======
+		this.xhr.open('GET',"/serg/app/templates/"+arr[self.count]+".html",true);
+		this.xhr.send();
+		this.xhr.onreadystatechange = function() {
+    		if (self.xhr.readyState != 4) return;
+    		App.Templates[arr[self.count]]=this.responseText;
+			self.count++;
+			if (self.count === self.arr_tpl.length) {
+				App.start();
+				return;
+			};
+			conssole.log(self.count);
+			self.loader(self.arr_tpl);
+    	};
+	}
+});
+>>>>>>> parent of 1c5439d... console
 
 })
