@@ -1,5 +1,5 @@
 #app {
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 }
 body {
 	margin-bottom: 60px;
@@ -95,7 +95,7 @@ body {
     font-size: 13px;
 }
 .wrap_range .button_apply {
-    margin-left: 5px;
+    margin-left: 15px;
 }
 .wrap_range .radio {
     width: 74px;
@@ -203,8 +203,7 @@ body {
 }
 .field {
 	border: none !important;
-	width: 60px;
-	min-width: 61px;
+	width: 35px;
 	height: 20px;
 	font-size: 13px;
 	margin-bottom: 13px;
@@ -213,7 +212,7 @@ body {
 }
 .shape_preview {
 	overflow: hidden;
-	height: 160px;
+	height: 180px;
     text-align: center;
     vertical-align: middle;
     background: #f4f4f4;
@@ -224,7 +223,7 @@ body {
 	padding: 60px 0 40px;
 }
 .scale {
-	transform: translateY(-30%) scale(0.35);
+	transform: translateY(-26%) scale(0.4);
 	perspective: 500px;
 }
 .my_shape_count {
@@ -251,7 +250,7 @@ body {
 	margin-bottom: 30px;
 }
 .thumbnail:hover {
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
+    border-color: #333;
 }
 .thumbnail .caption {
 	border-top: 1px dashed #DCDCDC;
@@ -388,6 +387,10 @@ footer p i {
 .btn-default:hover {
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+[autocomplete] {
+    padding-left: 5px !important;
+    width: 65px !important;
 }
 
 .wrapper {

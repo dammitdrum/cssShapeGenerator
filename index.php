@@ -38,21 +38,7 @@
     </footer>
 
   
-		<script src="js/lib/jquery.js"  type="text/javascript"></script>
-		<script src="js/lib/jquery-ui.min.js"></script>
-		<script src="js/lib/underscore.js"  type="text/javascript"></script>
-		<script src="js/lib/backbone.js"  type="text/javascript"></script>
-		<script src="js/lib/backbone.localStorage.js"  type="text/javascript"></script>
-		<script src="js/lib/backbone.marionette.min.js"  type="text/javascript"></script>
-		<script src="js/lib/jscolor.min.js"  type="text/javascript"></script>
-		<script src="js/lib/bootstrap.js"  type="text/javascript"></script>
-		<script src="js/lib/clipboard.js"  type="text/javascript"></script>
-
-		<script src="js/app.js"  type="text/javascript"></script>
-		<script src="js/models.js"  type="text/javascript"></script>
-		<script src="js/listViews.js"  type="text/javascript"></script>
-		<script src="js/editViews.js"  type="text/javascript"></script>
-		<script src="js/controller.js"  type="text/javascript"></script>
+		<script data-main="js/main" src="js/lib/require.js"></script>
 		
 	</body>
 </html>
