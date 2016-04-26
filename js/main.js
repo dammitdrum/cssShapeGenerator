@@ -24,7 +24,7 @@ require.config({
       deps : ['backbone']
     },
     bootstrap: {
-    	deps: ['jquery']
+      deps: ['jquery']
     }
   },
   deps : ['jquery','underscore','bootstrap','jscolor']
@@ -42,7 +42,18 @@ require(['backbone','app','controller'],function(Backbone,App,Controller){
     $('#app').addClass('loaded');
   });
 
-	var tplLoader = new App.Loader();
-  	tplLoader.start();
+  var tplLoader = new App.Loader([
+        'header_tpl',
+        'preload_tpl',
+        'list_tpl/list_layout_tpl',
+        'list_tpl/list_item_tpl',
+        'list_tpl/my_list_layout_tpl',
+        'edit_tpl/shape_layout_tpl',
+        'edit_tpl/shape_tpl',
+        'edit_tpl/prop_tpl',
+        'edit_tpl/sidebar_tpl',
+        'edit_tpl/gradient_tpl'
+      ]);
+    tplLoader.start();
  
 });

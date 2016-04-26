@@ -15,20 +15,9 @@ define(['marionette','backbone'],function(Marionette,Backbone){
 
 
 	App.Loader = Marionette.Object.extend({
-		initialize: function() {
+		initialize: function(options) {
 			App.Templates = {};
-			this.arr_tpl = [
-				'header_tpl',
-				'preload_tpl',
-				'list_tpl/list_layout_tpl',
-				'list_tpl/list_item_tpl',
-				'list_tpl/my_list_layout_tpl',
-				'edit_tpl/shape_layout_tpl',
-				'edit_tpl/shape_tpl',
-				'edit_tpl/prop_tpl',
-				'edit_tpl/sidebar_tpl',
-				'edit_tpl/gradient_tpl'
-			];
+			this.arr_tpl = options;
 			this.count = 0;
 			this.xhr = new XMLHttpRequest();
 		},
@@ -37,7 +26,6 @@ define(['marionette','backbone'],function(Marionette,Backbone){
 		},
 		loader: function(arr) {
 			var self = this;
-
 			this.xhr.open('GET',"/serg/app/templates/"+arr[self.count]+".html",true);
 			this.xhr.send();
 			this.xhr.onreadystatechange = function() {
@@ -52,7 +40,7 @@ define(['marionette','backbone'],function(Marionette,Backbone){
 	    	};
 		}
 	});
-	
+
 	return App;
 
 })
