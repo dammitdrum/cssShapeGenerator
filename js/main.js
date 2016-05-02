@@ -54,6 +54,6 @@ require(['backbone','app','controller'],function(Backbone,App,Controller){
         'edit_tpl/sidebar_tpl',
         'edit_tpl/gradient_tpl'
       ]);
-    tplLoader.start();
+    tplLoader.start();//start App
  
 });
