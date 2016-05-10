@@ -1,2 +1,2 @@
 # cssshapegenerator
-Help create simple one'div shapes with pseudo elements
+Help create simple single div shapes with pseudo elements, using backbone marionette and require, saving in localstorage.
